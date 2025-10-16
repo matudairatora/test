@@ -25,7 +25,7 @@ body {
 
 /* コンテンツエリア */
 .container {
-    width: 88%;
+    width: 100%;
     max-width: 900px;
     padding: 30px;
     background-color: #fff;

@@ -20,8 +20,9 @@ Route::get('/', [ContactController::class, 'index']);
 // 確認画面へ (POST /confirm)
 Route::post('/confirm', [ContactController::class, 'confirm']);
 
-/*
-Route::get('/', function () {
-    return view('contact.index');
-});
-*/
+// ★データ保存とサンクスページへ遷移 (POST /thanks)
+Route::post('/thanks', [ContactController::class, 'send']);
+
+// ★データ保存とサンクスページへ遷移 (POST /thanks)
+Route::post('/thanks', [ContactController::class, 'send']);
+

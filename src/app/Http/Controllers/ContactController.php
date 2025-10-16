@@ -21,4 +21,14 @@ class ContactController extends Controller
 
         return view('contact.confirm', compact('data'));
     }
+    public function send(Request $request)
+    {
+        $contact = $request->only([
+            'category_id', 'first_name', 'last_name', 'gender', 'email', 'tel', 'address', 'building', 'detail'
+        ]); 
+
+        DB::table('contacts')->insert($contactData);
+
+        return redirect('/thanks');
+    }
 }

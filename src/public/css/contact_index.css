@@ -1,9 +1,3 @@
-/* フォームの各行（Flexboxでラベルと入力欄を配置） */
-.form__group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
-}
 
 
 
@@ -11,9 +5,9 @@
     border-collapse: collapse;
     /* セルの境界線を結合 */
     width: 100%;
-    margin-top: 20px;
     border: 1px solid #ddd;
     /* 外枠の線（オプション） */
+
 }
 
 /* テーブルの行 */
@@ -21,37 +15,37 @@
     border-bottom: 1px solid #ddd;
     /* 行の区切り線 */
 }
+
+
+
 .confirm-label {
     width: 30%;
     /* ラベルの幅を指定 */
     background-color: #f5eee8;
     /* 画像に近い薄い茶色/ベージュの背景色 */
-    padding: 15px 20px;
     font-size: 14px;
     font-weight: bold;
     color: #444;
-    text-align: left;
-    /* テキストを左寄せ */
-    vertical-align: top;
-    /* 内容が長い場合に上端に揃える */
+
 }
 
 /* 値セル (<td>) */
 .confirm-value {
     width: 70%;
     /* 値の幅を指定 */
-    padding: 15px 20px;
+    padding: 1px 10px;
     font-size: 14px;
     background-color: #fff;
     white-space: pre-wrap;
-    vertical-align: top;
-    /* 内容が長い場合に上端に揃える */
+
 }
 
 
 
 
-/* ... (中略: index.blade.php関連のスタイル) ... */
+.required{
+    color: #F00;
+}
 .form__label {
     width: 30%;
     min-width: 120px;
@@ -73,7 +67,7 @@
 .form__input select,
 .form__input textarea {
     width: 100%;
-    padding: 10px;
+    padding: 2px;
     border: 1px solid #ddd;
     background-color: #f7f7f7;
     border-radius: 3px;
@@ -101,6 +95,7 @@
 
 .form__input--tel {
     display: flex;
+    height: 30px;
 }
 
 /* 電話番号フィールドの調整 */

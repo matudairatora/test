@@ -25,22 +25,15 @@
             {{-- 1. お名前 --}}
             <tr>
                 <th class="confirm-label">お名前</th>
-                <td class="confirm-value">{{ $data['last_name'] }} {{ $data['first_name'] }}</td>
+                <td class="confirm-value onamae">{{ $data['last_name'] }}
+                <div class="spece"></div> {{ $data['first_name'] }}</td>
             </tr>
             
             {{-- 2. 性別 --}}
             <tr>
                 <th class="confirm-label">性別</th>
                 <td class="confirm-value">
-                    @if (isset($data['gender']))
-                        @if ($data['gender'] == 1) 
-                            男性
-                        @elseif ($data['gender'] == 2) 
-                            女性
-                        @else 
-                            その他
-                        @endif
-                    @endif
+                {{ $data['gender'] }}
                 </td>
             </tr>
 
@@ -71,17 +64,8 @@
             {{-- 7. お問い合わせの種類 --}}
             <tr>
                 <th class="confirm-label">お問い合わせの種類</th>
-                <td class="confirm-value">
-                    @php
-                        $category_map = [
-                            '1' => '商品のお届けについて', 
-                            '2' => '商品の交換について', 
-                            '3' => '商品トラブル', 
-                            '4' => 'ショップへのお問い合わせ', 
-                            '5' => 'その他'
-                        ];
-                    @endphp
-                    {{ $category_map[$data['category_id']] ?? 'データエラー' }}
+                <td class="confirm-value category_id">
+                   {{ $data['category_id'] }}
                 </td>
             </tr>
 

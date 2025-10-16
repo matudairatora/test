@@ -16,6 +16,14 @@
     /* 行の区切り線 */
 }
 
+.onamae {
+    display: flex;
+}
+
+.spece {
+    margin-left: 5px;
+}
+
 /* ラベルセル (<th>) */
 .confirm-label {
     width: 30%;
@@ -40,9 +48,11 @@
     font-size: 14px;
     background-color: #fff;
     white-space: pre-wrap;
-    vertical-align: top;
-    /* 内容が長い場合に上端に揃える */
+
+    text-align: left;
 }
+
+
 
 /* 最後の行の区切り線を削除（任意） */
 .confirm-table tr:last-child {
